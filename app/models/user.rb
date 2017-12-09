@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
 
   def create
     user = User.new(user_params).save
+    
   end
 
   private
