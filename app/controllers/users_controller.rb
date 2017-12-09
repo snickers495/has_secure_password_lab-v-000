@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     if @user.authenticate(params[:password])
       @user.save
       session[:user_id] = @user.id
-      redirect_to @user_path
+      redirect_to user_path
     else
       redirect_to new_user_path
     end
