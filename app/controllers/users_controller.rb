@@ -2,6 +2,7 @@ require 'pry'
 class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
+    binding.pry
     if @user.authenticate(user_params[:password])
       @user.save
       session[:user_id] = @user.id
