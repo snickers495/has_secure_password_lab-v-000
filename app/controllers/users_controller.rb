@@ -8,7 +8,6 @@ class UsersController < ApplicationController
     else
       redirect_to new_user_path
     end
-
   end
 
   private
